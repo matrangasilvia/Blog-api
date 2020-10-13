@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+
+<style >
+h1,h2 {
+  text-shadow: 2px 2px blue;
+}
+</style>
+<style>
+#sfondo {
+background: url("sfondo.png");
+background-repeat: no-repeat;
+background-position: 0 0;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+}
+</style>
+<!-- <head> -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menù
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="index.html" >Home</a>
+      <a class="dropdown-item" href="pagina1.html">Articolo1</a>
+      <a class="dropdown-item" href="#">Articolo2</a>
+	  <a class="dropdown-item" href="#">Articolo3</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newPostModal">
+                Aggiungi articolo
+            </button>
+	
+</nav>
+
+</head>
+
+<!-- <body> -->
+<body  id="sfondo">
+<h1 style="color:#F0F3F4; text-align:center;" > Notizie dallo spazio</h1>
+<section class="container">
+
+<div class="row" id="postsRow">
+            <div class="col-md-4 col-sm-6 px-2 my-1" id="postContainer" style="display: none;">
+
+                <div class="card" id="first-article">
+
+                    <header class="card-header"></header>
+
+                    <article class="card-body">
+                        <h5 class="card-title"></h5>
+						 <p class="card-text"></p>
+						 <p class="card-text" id="card-tag"></p>
+						 
+                
+                    </article>
+
+ 
+	</div>
+
+	<input type="text" id="comment-text" value=""/>
+	<input type="button" id="send-comment" value="invia">
+  <div class="center"> 
+	<ul id=commentContainer> 
+	
+		<output type="text" id="commentContainer" value=""/> 
+	
+	</ul>
+	
+</div>
+            </div>
+</div>
+               
+</section>
+
+ 
+ <!-- Modal -->
+    <div class="modal fade" id="newPostModal" tabindex="-1" role="dialog" aria-labelledby="newPostModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newPostModalLabel">Aggiungi articolo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                              <input type="text" class="form-control" id="postTitle" placeholder="inserisci il titolo">
+                              <textarea class="form-control" placeholder="inserisci il testo" id="postBody" rows="4"></textarea>
+                            </div>
+                                
+                              
+                        </div>
+
+
+                    </form>
+					<div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="publicCheck">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        public 
+                                    </label>
+                                </div>
+
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value="" id="featuredCheck">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        featured 
+                                    </label>
+                                </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                    <button type="button" id="savePostBtn" class="btn btn-primary">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+
+	
+	
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="app/models/Post.js"></script>
+    <script src = "app/services/restController.js"></script>
+    <script src="app/controllers/index.js"></script>
+    <script src="js/main2.js"></script>
+
+
+ 
+
+  
+
+</body>
+</html>

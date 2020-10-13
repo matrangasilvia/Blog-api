@@ -1,15 +1,15 @@
 {
-  "name": "todolistapi",
+  "name": "blogapi",
   "version": "1.0.0",
-  "description": "RESTful todoListApi",
-  "main": "index.js",
+  "description": " ",
+  "main": "server.js",
   "scripts": {
-    "test": "echo\"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/generalgmt/RESTfulAPITutorial.git"
+    "url": "git+https://github.com/matrangasilvia/Blog-api.git"
   },
   "keywords": [
     "RESTful",
@@ -19,13 +19,14 @@
   "author": "olatude garuba",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/generalgmt/RESTfulAPITutorial/issues"
+    "url": "https://github.com/matrangasilvia/Blog-api/issues"
   },
-  "homepage": "https://github.com/generalgmt/RESTfulAPITutorial#readme",
+  "homepage": "https://github.com/matrangasilvia/Blog-api#readme",
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "mongoose": "^5.10.8"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
   }
 }
